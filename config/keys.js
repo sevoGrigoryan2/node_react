@@ -1,3 +1,4 @@
 module.exports = {
-    mongoUrl:"mongodb://localhost:27017/network"
+    mongoUrl:"mongodb://localhost:27017/network",
+    secretOrKey:"secret"
 }
