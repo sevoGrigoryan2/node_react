@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const passport = require("passport");
 
 app.use(bodyParser.urlencoded({
     extended:false
@@ -18,6 +19,9 @@ const posts = require("./routes/api/posts");
 app.use("/api/users",users);
 app.use("/api/profils",profils);
 app.use("/api/posts",posts);
+app.use(passport.initialize());
+
+require("./config/passport")(passport); 
 
 // DB config
 
