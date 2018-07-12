@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const path = require("path");
+app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({
     extended:false
@@ -9,7 +11,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.get('/',(req,res)=>{
-    res.send("Hello world");
+    res.sendFile(path.join(__dirname,"index.html"));
 });
 
 const usersLogin = require("./routes/api/usersLogin");
