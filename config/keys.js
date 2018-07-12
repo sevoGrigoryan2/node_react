@@ -1,4 +1,4 @@
 module.exports = {
-    mongoUrl:"mongodb://localhost:27017/network",
+    mongoUrl:"mongodb://sevada:12345sevada@ds255320.mlab.com:55320/network",
     secretOrKey:"secret"
 }
