@@ -20,7 +20,7 @@ const usersCurrent = require("./routes/api/usersCurrent");
 
 
 const profile = require("./routes/api/profile");
-const profile = require("./routes/api/profileByHandle");
+const profileByHandle = require("./routes/api/profileByHandle");
 
 const posts = require("./routes/api/posts");
 
