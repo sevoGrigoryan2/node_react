@@ -19,15 +19,26 @@ const usersRegister = require("./routes/api/usersRegister");
 const usersCurrent = require("./routes/api/usersCurrent");
 
 
+<<<<<<< HEAD
 const profils = require("./routes/api/profile");
+=======
+const profile = require("./routes/api/profile");
+const profileByHandle = require("./routes/api/profileByHandle");
+
+>>>>>>> master
 const posts = require("./routes/api/posts");
 
 app.use("/api/users/login",usersLogin);
 app.use("/api/users/register",usersRegister);
 app.use("/api/users/current",usersCurrent);
 
+<<<<<<< HEAD
 
 app.use("/api/profile",profils);
+=======
+app.use("/api/profile",profile);
+app.use("/api/profile/handle/:handle",profileByHandle);
+>>>>>>> master
 
 app.use("/api/posts",posts);
 app.use(passport.initialize());
