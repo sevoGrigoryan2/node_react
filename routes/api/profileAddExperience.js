@@ -17,7 +17,7 @@ const User = require('../../models/users');
 // @desc    Add experience to profile
 // @access  Private
 router.post(
-    '/experience',
+    '/',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
       const { errors, isValid } = validateExperienceInput(req.body);
@@ -42,8 +42,8 @@ router.post(
         // Add to exp array
         profile.experience.unshift(newExp);
   
-        profile.save().then(profile => res.json(profile)).catch(error=>res.status(400).json(error));
-      }).catch(error=>res.status(400).json(error));
+        profile.save().then(profile => res.json(profile));
+      });
     }
   );
 

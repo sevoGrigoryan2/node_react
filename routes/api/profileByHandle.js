@@ -17,7 +17,7 @@ const User = require('../../models/users');
 // @desc    Get profile by handle
 // @access  Public
 
-router.get('/handle/:handle', (req, res) => {
+router.get('/', (req, res) => {
     const errors = {};
   
     Profile.findOne({ handle: req.params.handle })

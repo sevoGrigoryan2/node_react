@@ -16,7 +16,7 @@ const User = require('../../models/users');
 // @desc    Delete experience from profile
 // @access  Private
 router.delete(
-    '/experience/:exp_id',
+    '/',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
       Profile.findOne({ user: req.user.id })

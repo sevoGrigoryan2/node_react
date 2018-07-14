@@ -16,7 +16,7 @@ const User = require('../../models/users');
 // @desc    Get profile by user ID
 // @access  Public
 
-router.get('/user/:user_id', (req, res) => {
+router.get('/', (req, res) => {
     const errors = {};
   
     Profile.findOne({ user: req.params.user_id })

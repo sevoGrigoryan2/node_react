@@ -15,7 +15,7 @@ const User = require('../../models/users');
 // @route   GET api/profile/all
 // @desc    Get all profiles
 // @access  Public
-router.get('/all', (req, res) => {
+router.get('/', (req, res) => {
     const errors = {};
   
     Profile.find()
