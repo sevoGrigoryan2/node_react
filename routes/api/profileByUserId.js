@@ -33,3 +33,5 @@ router.get('/user/:user_id', (req, res) => {
         res.status(404).json({ profile: 'There is no profile for this user' })
       );
   });
+
+  module.exports = router;

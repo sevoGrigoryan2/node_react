@@ -31,3 +31,4 @@ router.get('/all', (req, res) => {
       .catch(err => res.status(404).json({ profile: 'There are no profiles' }));
   });
   
+  module.exports = router;

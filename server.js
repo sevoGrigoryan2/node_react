@@ -20,7 +20,14 @@ const usersCurrent = require("./routes/api/usersCurrent");
 
 
 const profile = require("./routes/api/profile");
-// const profileByHandle = require("./routes/api/profileByHandle");
+const profileByHandle = require("./routes/api/profileByHandle");
+const profileByUserId = require("./routes/api/profileByUserId");
+const allProfiles = require("./routes/api/allProfiles");
+const profileAddEducation = require("./routes/api/profileAddEducation");
+const profileAddExperience = require("./routes/api/profileAddExperience");
+const deleteEducationById = require("./routes/api/deleteEducationById");
+const deleteExperienceById = require("./routes/api/deleteExperienceById");
+
 
 const posts = require("./routes/api/posts");
 
@@ -30,7 +37,14 @@ app.use("/api/users/current",usersCurrent);
 
 
 app.use("/api/profile",profile);
-// app.use("/api/profile/handle/:handle",profileByHandle);
+app.use("/api/profile/handle/:handle",profileByHandle);
+app.use("/api/profile/all",allProfiles);
+app.use("/api/profile/user/:user_id",profileByUserId);
+app.use("/api/profile/experience",profileAddExperience);
+app.use("/api/profile/education",profileAddEducation);
+app.use("/api/profile/education/:edu_id",deleteEducationById);
+app.use("/api/profile/experience/:exp_id",deleteExperienceById);
+
 
 
 app.use("/api/posts",posts);

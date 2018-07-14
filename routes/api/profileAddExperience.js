@@ -42,7 +42,9 @@ router.post(
         // Add to exp array
         profile.experience.unshift(newExp);
   
-        profile.save().then(profile => res.json(profile));
-      });
+        profile.save().then(profile => res.json(profile)).catch(error=>res.status(400).json(error));
+      }).catch(error=>res.status(400).json(error));
     }
   );
+
+  module.exports = router;
