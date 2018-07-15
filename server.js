@@ -4,7 +4,14 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const path = require("path");
 app.use(express.static(__dirname + '/public'));
+const cors = require("cors");
 
+//app.use(cors());
+
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
 app.use(bodyParser.urlencoded({
     extended:false
 }));
