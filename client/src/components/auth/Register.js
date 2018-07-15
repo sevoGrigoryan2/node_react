@@ -27,7 +27,7 @@ class Register extends Component {
 			password2:this.state.password2
 		}
 
-		axios.post("http://localhost:5000/api/users/register",newUser)
+		axios.post("https://developers-connecter.herokuapp.com/api/users/register",newUser)
 					.then(res =>console.log(res.data))
 					.catch(err=>this.setState({errors:err.response.data}))
 
