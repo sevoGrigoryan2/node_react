@@ -6,20 +6,18 @@ const path = require("path");
 app.use(express.static(__dirname + '/public'));
 const cors = require("cors");
 
-//app.use(cors());
-
 app.use(cors({
   origin: 'http://localhost:3000',
   credentials: true
 }));
+
+
 app.use(bodyParser.urlencoded({
     extended:false
 }));
 app.use(bodyParser.json());
 
-app.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname,"index.html"));
-});
+
 
 const usersLogin = require("./routes/api/usersLogin");
 const usersRegister = require("./routes/api/usersRegister");
