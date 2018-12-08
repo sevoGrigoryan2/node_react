@@ -15,6 +15,7 @@ import store from "./store"
 
 class App extends Component {
   render() {
+    console.log('ok');
     return (
       <Provider store = {store}>
         <Router>
